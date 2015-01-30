@@ -1,5 +1,5 @@
 """
-Django settings for lab2 project.
+Django settings for Lab2 project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.7/topics/settings/
@@ -17,7 +17,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'l0cqelofjjo6jgno)2iyw$^*(7=b%3(ly(cfjeeha8dxg7@!*f'
+SECRET_KEY = '%js-q23978vk(cw@#ls2600+v=ch1@s^e%a48dx^x**eee4&lo'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -48,9 +48,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'lab2.urls'
+ROOT_URLCONF = 'Lab2.urls'
 
-WSGI_APPLICATION = 'lab2.wsgi.application'
+WSGI_APPLICATION = 'Lab2.wsgi.application'
 
 
 # Database
@@ -81,3 +81,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_PATH = os.path.joint(BASE_DIR, 'static')
+
+STATICFILES_DIRS = (STATIC_PATH,)

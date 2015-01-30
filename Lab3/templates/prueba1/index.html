@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Test Templates CSS</title>
+	<link rel="stylesheet" type="text/css" href="{% static "css/styles.css"%}">
+</head>
+<body>
+	<section id="container">
+		<header>
+			<h1>{{ title }}</h1>
+			<p>{{ description }}</p>		
+		</header>
+	<section id="content">
+		<article>
+			<div>
+				<h2>{{ movie }}</h2>
+				<div>
+					Director: <span>{{ director }}</span>
+				</div>
+				<span>{{ genre }}</span>
+				<a href="#">Trailer</a>
+				<img src="{% static "img/tatiana.jpg" %}" alt=""/>
+				<img src="{{ MEDIA_URL }}vero.jpg" alt="" />
+			</div>
+		</article>
+			<h2>Título 2</h2>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+	</section>
+
+	<footer>
+		Creado por m@vila
+	</footer>
+	</section>
+</body>
+</html>
