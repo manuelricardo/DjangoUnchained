@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Detalle del Producto</title>
+</head>
+<body>
+	{% if product %}
+	<h2>{{ title }}</h2>
+	<ul>
+		<li>Número de producto: {{ product.id }}</li>
+		<li>Nombre del producto: {{ product.product_id }}</li>
+		<li>Tipo de producto: {{ product.product_type }}</li>
+		<li>Precio del producto: {{ product.product_price }}</li>
+		<li>Descripción del producto: {{ product.product_description }}</li>
+		<li>Cantidad en existencia: {{ stock.stock_quantity }}</li>
+	</ul>
+	{% else %}
+		<h3>No hay información disponible</h3>
+	{% endif %}
+	{% if error %}
+		<h4>Al parecer hubo un problema con la información</h4>
+	{% endif %}
+	<a href="{%url 'index' %}">Volver al Inicio</a>
+</body>
+</html>

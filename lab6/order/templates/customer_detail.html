@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Detalle del Cliente</title>
+</head>
+<body>
+	{% if customer %}
+	<h2>{{ title }}</h2>
+	<ul>
+		<li>ID del Cliente: {{ customer.customer_id}}</li>
+		<li>Nombre del Cliente: {{ customer.customer_name}}</li>
+		<li>Dirección: {{ customer.customer_address }}</li>
+		<li>Teléfono: {{ customer.customer_phone }}</li>
+		<li>Fecha creación: {{ customer.date_created_customer }}</li>
+		<li>Fecha modificación: {{ customer.date_updated_customer }}</li>
+	</ul>
+	{% else %}
+		<h3>No hay información disponible</h3>
+	{% endif %}
+	{% if error %}
+		<h4>Al parecer hubo un problema con la información</h4>
+	{% endif %}
+	<a href="{%url 'index' %}">Volver al Inicio</a>
+</body>
+</html>

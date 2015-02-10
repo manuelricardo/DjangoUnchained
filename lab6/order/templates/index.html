@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sistema de Órdenes</title>
+</head>
+<body>
+	<h1>{{ title }}</h1>
+	{% if orders %}
+		<ul>
+		{% for order in orders %}
+			<li><a href="{% url 'customer' order.order_customer_id.id  %}">{{ order.order_customer_id }}</a> tiene una orden con #{{ order.id }} <a href="{% url 'order' order.id %}">Ver Detalle</a>
+			</li>
+		{% endfor %}
+		</ul>
+		{% else %}
+			<h3>No hay órdenes en el Sistema</h3>
+		{% endif %}
+</body>
+</html> 
